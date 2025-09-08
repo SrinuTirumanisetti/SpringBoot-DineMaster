@@ -10,13 +10,20 @@ public class Chef {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @Column(nullable = false)
     private String firstName;
+
+    @Column(nullable = false)
     private String lastName;
+
+    @Column(nullable = false)
     private String expertise;
+
+    @Column(nullable = false)
     private int experienceYears;
 
     @ManyToOne
-    @JoinColumn(name = "restaurantId", referencedColumnName = "id")
+    @JoinColumn(name = "restaurantId", referencedColumnName = "id", nullable = false)
     private Restaurant restaurant;
 
     // Constructors

@@ -10,9 +10,16 @@ public class Restaurant {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @Column(nullable = false)
     private String name;
+
+    @Column(nullable = false)
     private String address;
+
+    @Column(nullable = false)
     private String cuisineType;
+
+    @Column(nullable = false)
     private int rating;
 
     // Constructors
