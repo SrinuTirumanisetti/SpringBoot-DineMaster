@@ -8,3 +8,10 @@
  */
 
 // Write your code here
+
+package com.example.dinemaster.repository;
+
+import com.example.dinemaster.model.Chef;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ChefJpaRepository extends JpaRepository<Chef, Integer> {}
