@@ -8,22 +8,23 @@ public class Chef {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
     private int id;
 
-    @Column(nullable = false)
+    @Column(name="firstname")
     private String firstName;
 
-    @Column(nullable = false)
+    @Column(name="lastname")
     private String lastName;
 
-    @Column(nullable = false)
+    @Column(name="expertise")
     private String expertise;
 
-    @Column(nullable = false)
+    @Column(name="experienceyears")
     private int experienceYears;
 
     @ManyToOne
-    @JoinColumn(name = "restaurantId", referencedColumnName = "id", nullable = false)
+    @JoinColumn(name = "restaurantid")  
     private Restaurant restaurant;
 
     // Constructors
@@ -39,45 +40,21 @@ public class Chef {
     }
 
     // Getters & Setters
-    public int getId() {
-        return id;
-    }
-    public void setId(int id) {
-        this.id = id;
-    }
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
 
-    public String getFirstName() {
-        return firstName;
-    }
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+    public String getFirstName() { return firstName; }
+    public void setFirstName(String firstName) { this.firstName = firstName; }
 
-    public String getLastName() {
-        return lastName;
-    }
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+    public String getLastName() { return lastName; }
+    public void setLastName(String lastName) { this.lastName = lastName; }
 
-    public String getExpertise() {
-        return expertise;
-    }
-    public void setExpertise(String expertise) {
-        this.expertise = expertise;
-    }
+    public String getExpertise() { return expertise; }
+    public void setExpertise(String expertise) { this.expertise = expertise; }
 
-    public int getExperienceYears() {
-        return experienceYears;
-    }
-    public void setExperienceYears(int experienceYears) {
-        this.experienceYears = experienceYears;
-    }
+    public int getExperienceYears() { return experienceYears; }
+    public void setExperienceYears(int experienceYears) { this.experienceYears = experienceYears; }
 
-    public Restaurant getRestaurant() {
-        return restaurant;
-    }
-    public void setRestaurant(Restaurant restaurant) {
-        this.restaurant = restaurant;
-    }
+    public Restaurant getRestaurant() { return restaurant; }
+    public void setRestaurant(Restaurant restaurant) { this.restaurant = restaurant; }
 }

@@ -8,18 +8,19 @@ public class Restaurant {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
     private int id;
 
-    @Column(nullable = false)
+    @Column(name="name")
     private String name;
 
-    @Column(nullable = false)
+    @Column(name="address")
     private String address;
 
-    @Column(nullable = false)
+    @Column(name="cuisinetype")
     private String cuisineType;
 
-    @Column(nullable = false)
+    @Column(name="rating")
     private int rating;
 
     // Constructors
